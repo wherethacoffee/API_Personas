@@ -1,0 +1,24 @@
+import { Router } from "express";
+import {welcome, fetchAll, fetchOne, add, update, remove} from '../controllers/personas.controller.js'
+import { validateSchema } from "../middlewares/validacion.middleware.js";
+import { addPersonaSchema } from "../schemas/personas.schema.js";
+
+const router = Router();
+
+//Ruta inicial
+router.get('/', welcome);
+
+//Consultas
+router.get('/fetchAll', fetchAll);
+router.get('/fetchOne/:curp', fetchOne)
+
+//Agregar registro
+router.post('/add', validateSchema(addPersonaSchema), add);
+
+//Actualizar registro
+router.put('/update/:curp', update);
+
+//Eliminar registro
+router.delete('/remove/:curp', remove);
+
+export default router;
