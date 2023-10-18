@@ -10,11 +10,15 @@ Este es un proyecto de API en Node.js que utiliza Express para crear un servidor
 - **Método:** GET
 - **Descripción:** Esta ruta proporciona un mensaje de bienvenida.
 
+![Página de bienvenida](screenshots/welcomePage.jpeg)
+
 ### 2. Listar Todos los Registros
 
 - **URL:** `https://apipersonas-production.up.railway.app/api/fetchAll`
 - **Método:** GET
 - **Descripción:** Esta ruta devuelve todos los registros de la tabla "personas" en formato JSON.
+
+![Método Fetch All en REST client](screenshots/fetchAll.jpeg)
 
 ### 3. Buscar por CURP
 
@@ -22,11 +26,19 @@ Este es un proyecto de API en Node.js que utiliza Express para crear un servidor
 - **Método:** GET
 - **Descripción:** Esta ruta devuelve el registro asociado a la CURP proporcionada en el parámetro `curp` de la solicitud.
 
+![Método Fetch One en Rest client](screenshots/fetchOne.jpeg)
+
 ### 4. Agregar Registro
 
 - **URL:** `https://apipersonas-production.up.railway.app/api/add`
 - **Método:** POST
 - **Descripción:** Esta ruta permite ingresar un nuevo registro a la base de datos. Debe enviarse un objeto JSON en el cuerpo de la solicitud con los datos de la persona a agregar.
+
+![Método add fallido debido a validación](screenshots/add_failed.jpeg)
+
+![Método add exitoso en REST client usando POST](screenshots/add_success.jpeg)
+
+![Buscando la persona recién agregada con Fetch One en REST client](screenshots/fetch_recentlyadded.jpeg)
 
 ### 5. Actualizar Registro
 
@@ -34,11 +46,19 @@ Este es un proyecto de API en Node.js que utiliza Express para crear un servidor
 - **Método:** PUT
 - **Descripción:** Esta ruta permite actualizar un registro existente. Debe proporcionarse la CURP del registro que se desea actualizar en el parámetro `curp` de la solicitud y enviar un objeto JSON en el cuerpo de la solicitud con los datos actualizados.
 
+![Método update exitoso en REST client usando PUT](screenshots/update.jpeg)
+
+![Buscando la persona recién actualizada con Fetch One en REST client](screenshots/fetch_recentlyupdated.jpeg)
+
 ### 6. Eliminar Registro
 
 - **URL:** `https://apipersonas-production.up.railway.app/api/remove/:curp`
 - **Método:** DELETE
 - **Descripción:** Esta ruta elimina el registro asociado a la CURP proporcionada en el parámetro `curp` de la solicitud.
+
+![Método remove exitoso en REST client usando DELETE](screenshots/remove.jpeg)
+
+![Buscando la persona recién agregada con Fetch One en REST client](screenshots/fetch_recentlyremoved.jpeg)
 
 ## Ejemplo de solicitud (cURL)
 
