@@ -95,3 +95,11 @@ export const remove = async (req, res) => {
     })
 }
 
+
+export const holaAri = (req, res) => {
+    res.status(200).json({
+        ok: true,
+        status: 200,
+        message: 'Holi, si ves esto me gustas y estás bien bonita<3'
+    })
+}
