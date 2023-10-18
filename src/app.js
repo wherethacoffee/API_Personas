@@ -4,10 +4,10 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import personaRoutes from './routes/personas.routes.js'
+import { PORT } from './config.js'
 
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 app.use(morgan('dev'));
 
