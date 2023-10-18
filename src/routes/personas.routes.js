@@ -16,7 +16,7 @@ router.get('/fetchOne/:curp', fetchOne)
 router.post('/add', validateSchema(addPersonaSchema), add);
 
 //Actualizar registro
-router.put('/update/:curp', update);
+router.put('/update/:curp', validateSchema(addPersonaSchema),update);
 
 //Eliminar registro
 router.delete('/remove/:curp', remove);

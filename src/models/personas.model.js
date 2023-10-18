@@ -1,3 +1,4 @@
+import { name } from "ejs";
 import { Model, Sequelize, DataTypes } from "sequelize";
 
 const sequelize = new Sequelize('personas_db', 'root', 'admin', {
